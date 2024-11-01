@@ -3,9 +3,17 @@
 /* HEADER  */
 
 header {
+  position: fixed;
   background-color: #ffc017;
   font-family: "Roboto", sans-serif;
   border-bottom: solid 1px #181d2a;
+  z-index: 1000;
+  width: 100%;
+  transition: background-color 300ms;
+}
+
+header.scrolled {
+  background-color: white; /* Colore dell'header dopo lo scroll */
 }
 
 .navigation-bar {
@@ -35,6 +43,17 @@ header {
   color: black;
 }
 
+.nav-list a:nth-of-type(5) {
+  border-radius: 20px;
+  color: white;
+  background-color: black;
+  transition: background-color 300ms;
+}
+
+.nav-list a:nth-of-type(5).greenPointer {
+  background-color: green;
+}
+
 .nav-list a:hover {
   border-radius: 20px;
   color: white;
@@ -57,7 +76,7 @@ main {
   background-color: #ffc017;
   display: flex;
   padding-left: 5rem;
-
+  padding-top: 80px;
   border-bottom: solid 1px #181d2a;
 }
 
@@ -67,6 +86,7 @@ main {
   width: 45%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 10%;
 }
 
 .random-m {
@@ -86,7 +106,12 @@ main {
   margin-top: 2.5rem;
 }
 
+.start-reading a:hover {
+  transform: scale(1.05);
+}
+
 .start-reading h1 {
+  font-family: "Spectral", sans-serif;
   margin-top: 4rem;
   font-size: 4.5rem;
 }
@@ -104,7 +129,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   margin-top: 0.5rem;
-  margin-right: 2rem;
+  margin-right: 5%;
   justify-content: space-between;
   border-bottom: solid 1px #e3e4e4;
 }
@@ -200,7 +225,7 @@ main {
   flex-direction: column;
   margin-left: 5rem;
   margin-top: 3rem;
-  width: 50%;
+  width: 55%;
 }
 
 .article-card {
@@ -233,7 +258,7 @@ main {
 }
 
 .article-card figure img {
-  width: 100%;
+  width: 170px;
   height: 100%;
 }
 
@@ -298,11 +323,20 @@ main {
 .discover-card {
   display: flex;
   flex-wrap: wrap;
-  font-size: 0.9rem;
-  color: #6c6c6c;
-  font-weight: 400;
   padding-bottom: 2rem;
   border-bottom: solid 1px #e3e4e4;
+}
+
+.discover-card a {
+  text-decoration: none;
+  color: #6c6c6c;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.discover-card a:hover {
+  transform: scale(1.05);
+  color: rgb(84, 153, 180);
 }
 
 .discover-card p {
@@ -317,10 +351,18 @@ main {
   margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
+}
+.discover-references a {
+  text-decoration: none;
   font-size: 0.9rem;
   color: #6c6c6c;
   font-weight: 400;
 }
+
+.discover-references a:hover {
+  color: rgb(48, 39, 170);
+}
+
 .discover-references p {
   border-radius: 5px;
   margin-right: 1.6rem;
